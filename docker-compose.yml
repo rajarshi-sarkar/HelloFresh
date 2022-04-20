@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  hellofresh:
+    image: hellofresh
+    build:
+      context: .
+      dockerfile: ./Dockerfile
