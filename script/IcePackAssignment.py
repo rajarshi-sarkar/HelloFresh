@@ -134,7 +134,7 @@ def run_transformations(Temperature_bands, Boxes, output_location):
     
     
     #Call add_pouch_count function to update the dataframe then call generate_transformed_data to generate the final o/p
-    boxes_df=boxes_df.head(1)#to be removed
+    boxes_df=boxes_df.head(10)#Please use it to limit API calls
     boxes_df['pouch_count']=boxes_df.apply(lambda row:add_pouch_count(row,temperature_bands_df),axis=1)
     output_file=generate_transformed_data(boxes_df,output_location)
     print("output_file",output_file)
